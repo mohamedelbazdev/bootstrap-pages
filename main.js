@@ -1,9 +1,12 @@
-function nameVaild(e) {
+function nameVaild() {
   var userName = document.getElementById("validationCustom01").value;
+  var error = document.getElementById("error");
+
   console.log(userName);
+
   if (userName.length < 5 || userName.length == "") {
-    document.getElementById("error").style.display = "block";
+    error.classList.remove("invisible");
   } else {
-    document.getElementById("error").style.display = "none";
+    error.classList.add("invisible");
   }
 }
